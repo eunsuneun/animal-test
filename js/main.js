@@ -16,17 +16,20 @@ let history = [];
 let questionIdx = 0;
 
 // 되돌리기
-$back.addEventListener('click',()=>{
-  questionIdx--;
-  let prevData = history.pop();
-  if(!prevData){
-    selected = [0,0,0,0,0,0,0,0,0,0,0,0];
-    goStart();
-    return;
-  }
-  selected = history[history.length-1];
-  showQuestion(questionIdx);
-});
+if($back){
+  $back.addEventListener('click',()=>{
+    questionIdx--;
+    let prevData = history.pop();
+    if(!prevData){
+      selected = [0,0,0,0,0,0,0,0,0,0,0,0];
+      goStart();
+      return;
+    }
+    selected = history[history.length-1];
+    showQuestion(questionIdx);
+  });
+}
+
 
 // 시작하기 ( 질문페이지 이동 )
 function goQna(){
@@ -126,6 +129,6 @@ function calResult(){
 
 // 다시하기
 function goStart(){
-  window.location.reload();
+  window.location.href = '/index.html';
 }
 

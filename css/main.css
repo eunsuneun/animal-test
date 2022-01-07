@@ -114,6 +114,10 @@ section.active{
   display: none;
   opacity: 0;
 }
+.share-result{
+  display: block;
+  opacity: 1;
+}
 .result-tit{
   font-size: 22px;
 }

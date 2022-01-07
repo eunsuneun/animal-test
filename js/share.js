@@ -1,65 +1,30 @@
-function kakaoShare(){
+const url = 'https://twelve-animal-type.netlify.app';
+function setShare(){
+  const resultAlt = document.querySelector('.result-img').firstElementChild.alt;
+  const shareTit = '십이간지 연애유형 결과';
+  const shareDesc = infoList[resultAlt].name;
+  const shareImg = url + '/img/image-' + resultAlt + '.png';
+  const shareURL = url + '/pages/' + resultAlt + '.html';
+
   Kakao.Link.sendDefault({
     objectType: 'feed',
     content: {
-      title: '오늘의 디저트',
-      description: '아메리카노, 빵, 케익',
-      imageUrl:
-        'http://mud-kage.kakao.co.kr/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg',
+      title: shareTit,
+      description: shareDesc,
+      imageUrl: shareImg,
       link: {
-        mobileWebUrl: 'https://developers.kakao.com',
-        androidExecutionParams: 'test',
+        mobileWebUrl: shareURL,
+        webUrl : shareURL
       },
-    },
-    itemContent: {
-      profileText: 'Kakao',
-      profileImageUrl: 'http://mud-kage.kakao.co.kr/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
-      titleImageUrl: 'http://mud-kage.kakao.co.kr/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
-      titleImageText: 'Cheese cake',
-      titleImageCategory: 'Cake',
-      items: [
-        {
-          item: 'Cake1',
-          itemOp: '1000원',
-        },
-        {
-          item: 'Cake2',
-          itemOp: '2000원',
-        },
-        {
-          item: 'Cake3',
-          itemOp: '3000원',
-        },
-        {
-          item: 'Cake4',
-          itemOp: '4000원',
-        },
-        {
-          item: 'Cake5',
-          itemOp: '5000원',
-        },
-      ],
-      sum: '총 결제금액',
-      sumOp: '15000원',
-    },
-    social: {
-      likeCount: 10,
-      commentCount: 20,
-      sharedCount: 30,
     },
     buttons: [
       {
-        title: '웹으로 이동',
+        title: '나도 테스트 해보기',
         link: {
-          mobileWebUrl: 'https://developers.kakao.com',
+          mobileWebUrl: shareURL,
+          webUrl : shareURL
         },
-      },
-      {
-        title: '앱으로 이동',
-        link: {
-          mobileWebUrl: 'https://developers.kakao.com',
-        },
-      },
+      }
     ]
   });
 }

@@ -10,7 +10,7 @@ const $resultImg = document.querySelector('.result-img');
 const $resultDesc = document.querySelector('.result-desc');
 const $back = document.querySelector('#back');
 
-const endPoint = 5;
+const endPoint = 12;
 let selected = [0,0,0,0,0,0,0,0,0,0,0,0];
 let history = [];
 let questionIdx = 0;

@@ -3,6 +3,9 @@
   font-family: 'Gowun Dodum', sans-serif;
   word-break: keep-all;
 }
+html,body{
+  overflow: hidden;
+}
 body{
   background-color: rgb(19, 28, 58);
   text-align: center;

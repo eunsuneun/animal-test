@@ -95,7 +95,7 @@ section.active{
   border: 1px solid #ddd;
   border-radius: 20px;
 }
-.answer-list:hover{
+.answer-list:hover, .answer-list:focus{
   background: #fff;
   border: 1px solid #fff;
 }

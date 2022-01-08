@@ -95,9 +95,11 @@ section.active{
   border: 1px solid #ddd;
   border-radius: 20px;
 }
-.answer-list:hover, .answer-list:focus{
-  background: #fff;
-  border: 1px solid #fff;
+@media (hover: hover) {
+  .answer-list:hover, .answer-list:focus{
+    background: #fff;
+    border: 1px solid #fff;
+  }
 }
 
 /* result */

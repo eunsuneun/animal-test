@@ -66,7 +66,6 @@ function addAnswer(txt, qIdx, idx){
   // 답변 클릭
   answer.addEventListener('click', () => {
     let children = document.querySelectorAll('.answer-list');
-    $back.focus();
     // 1초간 사라진다.
     for(let i = 0; i < children.length; i++){
       children[i].disabled = true;
